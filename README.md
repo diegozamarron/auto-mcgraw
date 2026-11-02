@@ -4,9 +4,9 @@
 
 <img src="assets/icon.png" alt="Auto-McGraw Logo" width="200">
 
-[![Release](https://img.shields.io/github/v/release/GooglyBlox/auto-mcgraw?include_prereleases&style=flat-square&cache=1)](https://github.com/GooglyBlox/auto-mcgraw/releases)
-[![License](https://img.shields.io/github/license/GooglyBlox/auto-mcgraw?style=flat-square&cache=1)](LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/GooglyBlox/auto-mcgraw/total?style=flat-square&cache=1)](https://github.com/GooglyBlox/auto-mcgraw/releases)
+[![Release](https://img.shields.io/github/v/release/diegozamarron/auto-mcgraw?include_prereleases&style=flat-square&cache=1)](https://github.com/diegozamarron/auto-mcgraw/releases)
+[![License](https://img.shields.io/github/license/diegozamarron/auto-mcgraw?style=flat-square&cache=1)](LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/diegozamarron/auto-mcgraw/total?style=flat-square&cache=1)](https://github.com/diegozamarron/auto-mcgraw/releases)
 
 *Automate your McGraw Hill Smartbook homework with AI integration (ChatGPT, Gemini & DeepSeek)*
 
@@ -16,15 +16,9 @@
 
 ---
 
-## Public Service Announcement
-
-**⚠️ Auto-McGraw is not published on the Chrome Web Store.** This GitHub repository is the only official place to download the extension. We've seen fraudulent/unofficial reuploads of Auto-McGraw appear on the Chrome Web Store — these are not affiliated with this project and we cannot vouch for their safety or integrity. Only install from this repository's [releases page](https://github.com/GooglyBlox/auto-mcgraw/releases).
-
----
-
 ## Installation
 
-1. Download the latest zip from the [releases page](https://github.com/GooglyBlox/auto-mcgraw/releases)
+1. Download the latest zip from the [releases page](https://github.com/diegozamarron/auto-mcgraw/releases)
 2. Extract the zip file to a folder
 3. Open Chrome and go to `chrome://extensions/`
 4. Enable "Developer mode" in the top right
@@ -58,6 +52,8 @@ Click the settings icon ( <img src="assets/settings-icon.svg" alt="Settings Icon
 - **Double Credit Mode:** answer each question in a duplicate tab as well, to earn double points
 - **Randomize Confidence:** pick High, Medium or Low confidence at random instead of always High
 - **Pause Before Submit:** fill in each answer, then wait for you to submit it and move on
+- **Human-like Delay:** wait a random number of seconds between your chosen minimum and maximum before answering each question, so the pace varies
+- **Target Accuracy:** answer a share of questions with a random guess (the AI isn't asked) so overall accuracy lands near your chosen percentage. Guessing can't push accuracy below chance (about 25% for four options, 50% for true/false), and fill-in-the-blank questions are always answered by the AI
 - Check for new releases
 
 The extension will automatically use your selected AI model for all future automation sessions.
@@ -70,6 +66,10 @@ Auto-McGraw is an independent project and is not affiliated with, endorsed by, s
 
 Any third-party names, trademarks, logos, assets, or likenesses referenced or displayed by this project remain the property of their respective owners and copyright holders.
 
+## Credits
+
+Based on [GooglyBlox/auto-mcgraw](https://github.com/GooglyBlox/auto-mcgraw).
+
 ## Issues
 
-Found a bug? [Create an issue](https://github.com/GooglyBlox/auto-mcgraw/issues).
+Found a bug? [Create an issue](https://github.com/diegozamarron/auto-mcgraw/issues).
