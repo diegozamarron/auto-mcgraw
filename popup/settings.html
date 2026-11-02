@@ -113,6 +113,70 @@
 
           <label class="option toggle-option">
             <span class="option-text">
+              <span class="option-title">Human-like Delay</span>
+              <span class="option-description">
+                Wait a random time between the two values (seconds) before
+                answering each question
+              </span>
+            </span>
+            <input type="checkbox" class="toggle" data-setting="humanDelay" />
+          </label>
+          <div class="option number-row">
+            <label>
+              Min (s)
+              <input
+                type="number"
+                class="number-input"
+                min="0"
+                max="600"
+                step="1"
+                data-setting="delayMinSec"
+              />
+            </label>
+            <label>
+              Max (s)
+              <input
+                type="number"
+                class="number-input"
+                min="0"
+                max="600"
+                step="1"
+                data-setting="delayMaxSec"
+              />
+            </label>
+          </div>
+
+          <label class="option toggle-option">
+            <span class="option-text">
+              <span class="option-title">Target Accuracy</span>
+              <span class="option-description">
+                Guess at random on some questions (without asking the AI) so
+                accuracy lands near the percentage below. Fill-in-the-blank is
+                always answered by the AI
+              </span>
+            </span>
+            <input
+              type="checkbox"
+              class="toggle"
+              data-setting="humanAccuracy"
+            />
+          </label>
+          <div class="option number-row">
+            <label>
+              Accuracy (%)
+              <input
+                type="number"
+                class="number-input"
+                min="0"
+                max="100"
+                step="1"
+                data-setting="accuracyPercent"
+              />
+            </label>
+          </div>
+
+          <label class="option toggle-option">
+            <span class="option-text">
               <span class="option-title">Pause Before Submit</span>
               <span class="option-description">
                 Fill in each answer, then wait for you to submit it and move to

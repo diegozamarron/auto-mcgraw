@@ -155,6 +155,7 @@
 
     const questionSignature = signature();
     const reply = await run.ask(question);
+    await run.humanPause();
     if (signature() !== questionSignature) return;
 
     const values = text.flattenAnswerValues(reply?.answer);

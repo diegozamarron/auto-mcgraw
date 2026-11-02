@@ -323,3 +323,30 @@ h2 {
 .settings-footer a:hover {
   color: var(--text);
 }
+
+.number-row {
+  display: flex;
+  gap: 16px;
+  cursor: default;
+}
+
+.number-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.number-input {
+  width: 72px;
+  padding: 4px 6px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.number-input:focus-visible {
+  outline: 2px solid var(--accent);
+}

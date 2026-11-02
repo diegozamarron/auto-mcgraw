@@ -86,7 +86,12 @@
   async function renderToggles() {
     const values = await settings.load();
     settingToggles.forEach((toggle) => {
-      toggle.checked = Boolean(values[toggle.dataset.setting]);
+      const value = values[toggle.dataset.setting];
+      if (toggle.type === "number") {
+        if (document.activeElement !== toggle) toggle.value = value;
+      } else {
+        toggle.checked = Boolean(value);
+      }
     });
   }
 
@@ -173,8 +178,31 @@
     });
   });
 
+  async function saveNumber(input) {
+    const min = Number(input.min);
+    const max = Number(input.max);
+    let value = Math.round(input.valueAsNumber);
+    if (Number.isNaN(value)) value = settings.DEFAULTS[input.dataset.setting];
+    value = Math.min(max, Math.max(min, value));
+
+    const values = { [input.dataset.setting]: value };
+    const current = await settings.load();
+    // Keep the delay range ordered.
+    if (input.dataset.setting === "delayMinSec") {
+      values.delayMaxSec = Math.max(value, current.delayMaxSec);
+    } else if (input.dataset.setting === "delayMaxSec") {
+      values.delayMinSec = Math.min(value, current.delayMinSec);
+    }
+    input.value = value;
+    await settings.save(values);
+  }
+
   settingToggles.forEach((toggle) => {
     toggle.addEventListener("change", () => {
+      if (toggle.type === "number") {
+        saveNumber(toggle).catch(logError);
+        return;
+      }
       settings
         .save({ [toggle.dataset.setting]: toggle.checked })
         .catch(logError);

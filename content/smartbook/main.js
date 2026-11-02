@@ -162,6 +162,7 @@
     const signature = questions.signature(container);
     const reply = await run.ask(questions.parse(container, pendingCorrection));
     pendingCorrection = null;
+    await run.humanPause();
 
     const current = questions.findContainer();
     if (

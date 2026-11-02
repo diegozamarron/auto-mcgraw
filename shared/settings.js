@@ -4,6 +4,11 @@
     doubleCreditMode: false,
     randomConfidence: false,
     pauseBeforeSubmit: false,
+    humanDelay: false,
+    delayMinSec: 5,
+    delayMaxSec: 20,
+    humanAccuracy: false,
+    accuracyPercent: 55,
   });
 
   function load() {
